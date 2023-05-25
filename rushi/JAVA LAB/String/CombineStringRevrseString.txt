@@ -1,0 +1,35 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class StringOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] strings = new String[10];
+
+        // Reading 10 strings from the console
+        System.out.println("Enter 10 strings:");
+        for (int i = 0; i < 10; i++) {
+            strings[i] = scanner.nextLine();
+        }
+
+        // Sorting and printing the strings
+        Arrays.sort(strings);
+        System.out.println("Sorted strings:");
+        for (String string : strings) {
+            System.out.println(string);
+        }
+
+        // Combining two strings
+        System.out.print("Enter the first string: ");
+        String firstString = scanner.nextLine();
+        System.out.print("Enter the second string: ");
+        String secondString = scanner.nextLine();
+        String combinedString = firstString.concat(secondString);
+        System.out.println("Combined string: " + combinedString);
+
+        // Reversing the first string and displaying it
+        StringBuilder reversedString = new StringBuilder(firstString);
+        reversedString.reverse();
+        System.out.println("Reversed string: " + reversedString.toString());
+    }
+}

@@ -1,0 +1,13 @@
+public class umbrella {
+
+    public static void main(String[] args) {
+        String word="umbrella";
+        if(word.contains("e")){
+            System.out.println("It Contains e");
+
+        }else{
+            System.out.println("it doesent contain e");
+        }
+
+    }
+}

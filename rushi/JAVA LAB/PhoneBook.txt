@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class HashmapQuestion {
+    public static void main(String[] args) {
+        HashMap<String, Integer> map = new HashMap<>();
+        System.out.println("Enter the Number of entries: ");
+        Scanner sc = new Scanner(System.in);
+        int total = sc.nextInt();
+        for (int i = 0; i < total; i++) {
+            System.out.println("Enter name of person: ");
+            String name = sc.next();
+            System.out.println("Enter phone number: ");
+            int n = sc.nextInt();
+            Integer num = new Integer(n);
+            map.put(name, num);
+        }
+        System.out.println("\nEnter query: ");
+        String query = sc.next();
+        Integer num = map.get(query);
+        if (num == null) {
+            System.out.println("Not Found");
+        }
+        else {
+            System.out.println("Name: " + query + "\nPhone Number: " + num);
+        }
+        sc.close();
+    }
+}

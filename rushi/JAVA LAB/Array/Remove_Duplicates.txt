@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+//        int[] arr={1,2,2,3,4,5,5};
+//        int length=arr.length;
+//        int j=0,i=0;
+//        int[] uptdArr=new int[length];
+//        for (i=0;i<length-1;i++){
+//            if(arr[i]!=arr[i+1]){
+//                uptdArr[j++]=arr[i];
+//            }
+//        }
+//        uptdArr[j++]=arr[i-1];
+//        for (int k=0;k<j;k++){
+//            System.out.println("Elements are"+uptdArr[k]);
+//        }
+        int size;
+        int j,s;
+        System.out.println("Enter Elen=menrs In Array\n");
+        Scanner sc=new Scanner(System.in);
+        size=sc.nextInt();
+        int[] arr=new int[size];
+        int[] newArra=new int[size];
+        //Code For Taking Array Input
+        for (int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        //Code For Sroting Elements
+        for (j=0;j<size;j++){
+            for(s=0;s<size-1;s++){
+                if(arr[s]>arr[s+1]){
+                    int temp=arr[s];
+                    arr[s]=arr[s+1];
+                    arr[s+1]=temp;
+                }
+            }
+        }
+        //PRinting Sorted Elements
+        for(int f=0;f<size;f++){
+            System.out.println("Sorted Elem"+arr[f]);
+        }
+        //code For removing Dupllicated Eleemnts
+        int o,z=0;
+        for(o=0;o<size-1;o++){
+            if(arr[o]!=arr[o+1]){
+                newArra[z++]=arr[o];
+            }
+        }
+        //PRinting Final Values
+        newArra[o++]=arr[o-1];
+        for (int x=0;x<o;x++){
+            System.out.println("After Removing Duplicates\n"+newArra[x]);
+        }
+
+    }
+}

@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+abstract class Vehicle {
+    abstract void move();
+}
+class helicopter extends Vehicle{
+    void move(){
+        System.out.println("The Helicopter flies in the air.");
+    }
+}
+class car extends Vehicle{
+    void move(){
+        System.out.println("The Car drives on the road.");
+    }
+}
+class train extends Vehicle{
+    void move(){
+        System.out.println("The Train runs on the track.");
+    }
+}public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the type of vehicle you want to order (helicopter/car/train):");
+        String vehicleType = scanner.nextLine();
+
+        Vehicle vehicle;
+
+        switch (vehicleType) {
+            case "helicopter":
+                vehicle = new helicopter();
+                break;
+            case "car":
+                vehicle = new car();
+                break;
+            case "train":
+                vehicle = new train();
+                break;
+            default:
+                System.out.println("Invalid vehicle type.");
+                return;
+        }
+
+        vehicle.move();
+    }
+}
+
+

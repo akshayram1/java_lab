@@ -1,0 +1,19 @@
+public class DuplicatesString {
+    public static void main(String[] args) {
+        String str="I Love Java is Java Java I";
+        String[] word=str.split(" ");
+        //System.out.println(word[4]);
+        for(int i=0;i<word.length;i++){
+            int count=1;
+            for(int j=i+1;j<word.length;j++){
+                if(word[i].equals(word[j])){
+                    count++;
+                    word[j]="0";
+                }
+            }
+            if(count>1 && word[i]!="0"){
+                System.out.println("Repeated Word: "+word[i]+"\nCount:"+count);
+            }
+        }
+    }
+}

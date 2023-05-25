@@ -1,0 +1,18 @@
+public class Pattern {
+    public static void main(String[] args) {
+        int i = 1;
+        for (i = 1; i <= 7; i++) {
+            for (int j = 1; j <=i*2-1; j++) {
+                System.out.print("*");
+            }
+            System.out.println("\n");
+        }for(int k=7-1;k>=1;k--){
+            for(int z=1;z<=k*2-1;z++){
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+
+
+    }
+}
